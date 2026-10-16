@@ -1,0 +1,7 @@
+[1/2] Building C object CMakeFiles/SignalNode.dir/target/sn_app.c.obj
+[2/2] Linking C executable SignalNode.elf
+Memory region         Used Size  Region Size  %age Used
+           FLASH:       35024 B         1 MB      3.34%
+             RAM:       56968 B       128 KB     43.46%
+   text	   data	    bss	    dec	    hex	filename
+  34924	     92	  56872	  91888	  166f0	C:/Users/QIA/Documents/Codex/2026-10-16/referenced-chatgpt-conversation-this-is-an/work/SignalNode/build-arm-gcc/SignalNode.elf

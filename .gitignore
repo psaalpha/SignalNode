@@ -1,0 +1,10 @@
+build*/
+validation/generated/
+__pycache__/
+*.o
+*.obj
+keil/Objects/
+keil/Listings/
+*.uvguix.*
+*.uvoptx
+capture/

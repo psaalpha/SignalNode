@@ -1,0 +1,183 @@
+{
+  "status": "PASS",
+  "environment": "host C + NumPy; synthetic ADC codes; no target measurements",
+  "scenarios": 10,
+  "frames_compared": 310,
+  "coherent_625_last_frame": {
+    "first_sample": "15360",
+    "mean_v": "1.64999855",
+    "raw_ac_rms_v": "0.424223512",
+    "filtered_ac_rms_v": "0.424223512",
+    "peak_bin_hz": "625",
+    "peak_hz": "624.999939",
+    "peak_amplitude_v": "0.599942029",
+    "band_power_v2": "0.179965168",
+    "rail_samples": "0"
+  },
+  "off_bin_637_3_last_frame": {
+    "first_sample": "15360",
+    "mean_v": "1.65150535",
+    "raw_ac_rms_v": "0.42428863",
+    "filtered_ac_rms_v": "0.42428863",
+    "peak_bin_hz": "640.625",
+    "peak_hz": "637.222534",
+    "peak_amplitude_v": "0.533106148",
+    "band_power_v2": "0.179997653",
+    "rail_samples": "0"
+  },
+  "lowpass_2k_attenuation_db": -15.437025591519726,
+  "theoretical_attenuation_db": -15.437026210593697,
+  "alias_6500_observed_hz": 1499.99988,
+  "cases": [
+    {
+      "case": "coherent_625_hann",
+      "frames": 31,
+      "max_abs_error": {
+        "first_sample": 0.0,
+        "mean_v": 1.5751327837598694e-06,
+        "raw_ac_rms_v": 5.212719155212042e-07,
+        "filtered_ac_rms_v": 5.212719155212042e-07,
+        "peak_bin_hz": 0.0,
+        "peak_hz": 3.030148582183756e-05,
+        "peak_amplitude_v": 1.4486141763914162e-07,
+        "band_power_v2": 2.1267904354305145e-08,
+        "rail_samples": 0.0
+      }
+    },
+    {
+      "case": "coherent_625_rect",
+      "frames": 31,
+      "max_abs_error": {
+        "first_sample": 0.0,
+        "mean_v": 1.5751327837598694e-06,
+        "raw_ac_rms_v": 5.212719155212042e-07,
+        "filtered_ac_rms_v": 5.212719155212042e-07,
+        "peak_bin_hz": 0.0,
+        "peak_hz": 0.0,
+        "peak_amplitude_v": 3.423961814075227e-08,
+        "band_power_v2": 3.7740823605192375e-08,
+        "rail_samples": 0.0
+      }
+    },
+    {
+      "case": "off_bin_637_3",
+      "frames": 31,
+      "max_abs_error": {
+        "first_sample": 0.0,
+        "mean_v": 2.1082417582807267e-06,
+        "raw_ac_rms_v": 1.5518168872130644e-07,
+        "filtered_ac_rms_v": 1.5518168872130644e-07,
+        "peak_bin_hz": 0.0,
+        "peak_hz": 3.220024598249438e-05,
+        "peak_amplitude_v": 1.3898007888979436e-07,
+        "band_power_v2": 8.338888740633266e-08,
+        "rail_samples": 0.0
+      }
+    },
+    {
+      "case": "mixture_hum_noise",
+      "frames": 31,
+      "max_abs_error": {
+        "first_sample": 0.0,
+        "mean_v": 1.8136950552527509e-06,
+        "raw_ac_rms_v": 2.1616221734799268e-07,
+        "filtered_ac_rms_v": 2.1616221734799268e-07,
+        "peak_bin_hz": 0.0,
+        "peak_hz": 3.7886817153776065e-05,
+        "peak_amplitude_v": 1.5122816554580254e-07,
+        "band_power_v2": 2.2518770989576886e-07,
+        "rail_samples": 0.0
+      }
+    },
+    {
+      "case": "mixed_lowpass",
+      "frames": 31,
+      "max_abs_error": {
+        "first_sample": 0.0,
+        "mean_v": 4.483292124435323e-06,
+        "raw_ac_rms_v": 6.2869347200456e-07,
+        "filtered_ac_rms_v": 2.0662985900088415e-07,
+        "peak_bin_hz": 0.0,
+        "peak_hz": 3.081930890402873e-05,
+        "peak_amplitude_v": 1.197860134416473e-07,
+        "band_power_v2": 4.745137976991387e-08,
+        "rail_samples": 0.0
+      }
+    },
+    {
+      "case": "tone_2k_bypass",
+      "frames": 31,
+      "max_abs_error": {
+        "first_sample": 0.0,
+        "mean_v": 4.4109203294340205e-06,
+        "raw_ac_rms_v": 8.659738470750966e-07,
+        "filtered_ac_rms_v": 8.659738470750966e-07,
+        "peak_bin_hz": 0.0,
+        "peak_hz": 0.00010764584067146643,
+        "peak_amplitude_v": 1.4751623800268732e-07,
+        "band_power_v2": 3.570511744599436e-08,
+        "rail_samples": 0.0
+      }
+    },
+    {
+      "case": "tone_2k_lowpass",
+      "frames": 31,
+      "max_abs_error": {
+        "first_sample": 0.0,
+        "mean_v": 4.4109203294340205e-06,
+        "raw_ac_rms_v": 8.659738470750966e-07,
+        "filtered_ac_rms_v": 1.3098770478003896e-07,
+        "peak_bin_hz": 0.0,
+        "peak_hz": 0.00010855429127332172,
+        "peak_amplitude_v": 7.732193699205858e-08,
+        "band_power_v2": 5.522608457347866e-09,
+        "rail_samples": 0.0
+      }
+    },
+    {
+      "case": "dc_only",
+      "frames": 31,
+      "max_abs_error": {
+        "first_sample": 0.0,
+        "mean_v": 1.0040402929734071e-05,
+        "raw_ac_rms_v": 1.0013580299333866e-05,
+        "filtered_ac_rms_v": 1.0013580299333866e-05,
+        "peak_bin_hz": 0.0,
+        "peak_hz": 0.0,
+        "peak_amplitude_v": 0.0,
+        "band_power_v2": 5.24507897e-25,
+        "rail_samples": 0.0
+      }
+    },
+    {
+      "case": "near_rail",
+      "frames": 31,
+      "max_abs_error": {
+        "first_sample": 0.0,
+        "mean_v": 3.851327836645879e-07,
+        "raw_ac_rms_v": 1.6358130283666839e-06,
+        "filtered_ac_rms_v": 1.6358130283666839e-06,
+        "peak_bin_hz": 0.0,
+        "peak_hz": 3.0062125233598636e-05,
+        "peak_amplitude_v": 2.1781013304078556e-07,
+        "band_power_v2": 3.5132698084083813e-07,
+        "rail_samples": 0.0
+      }
+    },
+    {
+      "case": "alias_6500_to_1500",
+      "frames": 31,
+      "max_abs_error": {
+        "first_sample": 0.0,
+        "mean_v": 1.2627609888848923e-06,
+        "raw_ac_rms_v": 1.1567046580562845e-06,
+        "filtered_ac_rms_v": 1.1567046580562845e-06,
+        "peak_bin_hz": 0.0,
+        "peak_hz": 5.494892411661567e-05,
+        "peak_amplitude_v": 1.418005473041717e-07,
+        "band_power_v2": 3.11351186221831e-08,
+        "rail_samples": 0.0
+      }
+    }
+  ]
+}

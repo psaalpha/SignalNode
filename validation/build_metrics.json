@@ -1,0 +1,20 @@
+{
+  "SignalNode_F407_Full": {
+    "code": 21092,
+    "ro_data": 9652,
+    "rw_data": 236,
+    "zi_data": 56668,
+    "flash_conservative": 30980,
+    "ram": 56904,
+    "keil_32k_margin": 1788
+  },
+  "SignalNode_F407_BFSK_Lite": {
+    "code": 14156,
+    "ro_data": 456,
+    "rw_data": 232,
+    "zi_data": 36080,
+    "flash_conservative": 14844,
+    "ram": 36312,
+    "keil_32k_margin": 17924
+  }
+}

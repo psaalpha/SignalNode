@@ -1,0 +1,35 @@
+name: Build and verify
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  host:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: cmake -S . -B build-host -DSN_SANITIZE=ON && cmake --build build-host --parallel 2
+      - run: ctest --test-dir build-host --output-on-failure
+      - run: python scripts/validate_reference.py --executable build-host/sn_replay_cmsis --out validation/generated/cmsis
+      - run: python scripts/validate_bfsk.py --executable build-host/sn_bfsk_replay --out validation/generated/bfsk
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: host-validation
+          path: validation/generated/
+  firmware:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y gcc-arm-none-eabi libnewlib-arm-none-eabi
+      - run: cmake -S firmware -B build-arm -DCMAKE_TOOLCHAIN_FILE=${{ github.workspace }}/scripts/arm-gcc.cmake && cmake --build build-arm --parallel 2
+      - uses: actions/upload-artifact@v4
+        with:
+          name: f407-firmware
+          path: |
+            build-arm/SignalNode.elf
+            build-arm/SignalNode.bin
+            build-arm/SignalNode.map

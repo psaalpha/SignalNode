@@ -1,0 +1,40 @@
+set(SN_SOURCES
+  ${SN_ROOT}/firmware/core/sn_dsp.c
+  ${SN_ROOT}/firmware/core/sn_wire.c
+  ${SN_ROOT}/firmware/core/sn_bfsk.c
+  ${SN_ROOT}/firmware/core/sn_modbus.c
+  ${SN_ROOT}/firmware/target/sn_system.c
+  ${SN_ROOT}/firmware/target/sn_board_spl.c
+  ${SN_ROOT}/firmware/target/sn_app.c
+  ${SN_ROOT}/firmware/target/sn_fft_tables.c
+  ${SN_ROOT}/firmware/platform/sn_cmsis_fft.c
+  ${SN_ROOT}/vendor/spl/src/misc.c
+  ${SN_ROOT}/vendor/spl/src/stm32f4xx_adc.c
+  ${SN_ROOT}/vendor/spl/src/stm32f4xx_dac.c
+  ${SN_ROOT}/vendor/spl/src/stm32f4xx_dma.c
+  ${SN_ROOT}/vendor/spl/src/stm32f4xx_flash.c
+  ${SN_ROOT}/vendor/spl/src/stm32f4xx_gpio.c
+  ${SN_ROOT}/vendor/spl/src/stm32f4xx_iwdg.c
+  ${SN_ROOT}/vendor/spl/src/stm32f4xx_pwr.c
+  ${SN_ROOT}/vendor/spl/src/stm32f4xx_rcc.c
+  ${SN_ROOT}/vendor/spl/src/stm32f4xx_tim.c
+  ${SN_ROOT}/vendor/spl/src/stm32f4xx_usart.c
+  ${SN_ROOT}/vendor/freertos/tasks.c
+  ${SN_ROOT}/vendor/freertos/queue.c
+  ${SN_ROOT}/vendor/freertos/list.c
+  ${SN_ROOT}/vendor/cmsis-dsp/Source/TransformFunctions/arm_rfft_fast_f32.c
+  ${SN_ROOT}/vendor/cmsis-dsp/Source/TransformFunctions/arm_cfft_f32.c
+  ${SN_ROOT}/vendor/cmsis-dsp/Source/TransformFunctions/arm_cfft_radix8_f32.c
+  ${SN_ROOT}/vendor/cmsis-dsp/Source/TransformFunctions/arm_bitreversal2.c
+)
+set(SN_INCLUDES
+  ${SN_ROOT}/firmware/core
+  ${SN_ROOT}/firmware/target
+  ${SN_ROOT}/firmware/platform
+  ${SN_ROOT}/vendor/spl/inc
+  ${SN_ROOT}/vendor/device/Include
+  ${SN_ROOT}/vendor/cmsis-core/CMSIS/Core/Include
+  ${SN_ROOT}/vendor/cmsis-dsp/Include
+  ${SN_ROOT}/vendor/cmsis-dsp/PrivateInclude
+  ${SN_ROOT}/vendor/freertos/include
+)

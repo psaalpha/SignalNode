@@ -1,0 +1,133 @@
+{
+  "seed": 20261016,
+  "sample_rate": 8000,
+  "bit_rate": 100,
+  "known_timing_ber": [
+    {
+      "eb_n0_db": -4,
+      "bits": 2000,
+      "errors": 855,
+      "ber": 0.4275,
+      "theory": 0.4097529893508407
+    },
+    {
+      "eb_n0_db": 0,
+      "bits": 2000,
+      "errors": 617,
+      "ber": 0.3085,
+      "theory": 0.3032653298563167
+    },
+    {
+      "eb_n0_db": 4,
+      "bits": 2000,
+      "errors": 290,
+      "ber": 0.145,
+      "theory": 0.1424035434814758
+    },
+    {
+      "eb_n0_db": 8,
+      "bits": 2000,
+      "errors": 48,
+      "ber": 0.024,
+      "theory": 0.021323747889132938
+    },
+    {
+      "eb_n0_db": 12,
+      "bits": 2000,
+      "errors": 0,
+      "ber": 0.0,
+      "theory": 0.00018089150200558809
+    }
+  ],
+  "packet_receiver": [
+    {
+      "case": "clean",
+      "noise_sigma_v": 0,
+      "clock_error_ppm": 0,
+      "sent_frames": 6,
+      "valid_frames": 6,
+      "packet_error_rate": 0.0,
+      "reassembled_frames": 6,
+      "compared_payload_bits": 768,
+      "observed_payload_bit_errors": 0,
+      "observed_payload_ber": 0.0
+    },
+    {
+      "case": "noise_005",
+      "noise_sigma_v": 0.05,
+      "clock_error_ppm": 0,
+      "sent_frames": 6,
+      "valid_frames": 6,
+      "packet_error_rate": 0.0,
+      "reassembled_frames": 6,
+      "compared_payload_bits": 768,
+      "observed_payload_bit_errors": 0,
+      "observed_payload_ber": 0.0
+    },
+    {
+      "case": "noise_020",
+      "noise_sigma_v": 0.2,
+      "clock_error_ppm": 0,
+      "sent_frames": 6,
+      "valid_frames": 6,
+      "packet_error_rate": 0.0,
+      "reassembled_frames": 6,
+      "compared_payload_bits": 768,
+      "observed_payload_bit_errors": 0,
+      "observed_payload_ber": 0.0
+    },
+    {
+      "case": "clock_plus_200ppm",
+      "noise_sigma_v": 0.03,
+      "clock_error_ppm": 200,
+      "sent_frames": 6,
+      "valid_frames": 6,
+      "packet_error_rate": 0.0,
+      "reassembled_frames": 6,
+      "compared_payload_bits": 768,
+      "observed_payload_bit_errors": 0,
+      "observed_payload_ber": 0.0
+    },
+    {
+      "case": "clock_minus_200ppm",
+      "noise_sigma_v": 0.03,
+      "clock_error_ppm": -200,
+      "sent_frames": 6,
+      "valid_frames": 6,
+      "packet_error_rate": 0.0,
+      "reassembled_frames": 6,
+      "compared_payload_bits": 768,
+      "observed_payload_bit_errors": 0,
+      "observed_payload_ber": 0.0
+    },
+    {
+      "case": "clock_plus_1000ppm",
+      "noise_sigma_v": 0.03,
+      "clock_error_ppm": 1000,
+      "sent_frames": 6,
+      "valid_frames": 6,
+      "packet_error_rate": 0.0,
+      "reassembled_frames": 6,
+      "compared_payload_bits": 768,
+      "observed_payload_bit_errors": 0,
+      "observed_payload_ber": 0.0
+    },
+    {
+      "case": "strong_noise",
+      "noise_sigma_v": 2.0,
+      "clock_error_ppm": 0,
+      "sent_frames": 6,
+      "valid_frames": 0,
+      "packet_error_rate": 1.0,
+      "reassembled_frames": 0,
+      "compared_payload_bits": 0,
+      "observed_payload_bit_errors": 0,
+      "observed_payload_ber": null
+    }
+  ],
+  "limitations": [
+    "known_timing_ber assumes known symbol boundaries",
+    "observed_payload_ber covers only fully reassembled matched frames; missing frames counted in PER",
+    "no continuous clock-recovery PLL; no hardware/radio measurement"
+  ]
+}
