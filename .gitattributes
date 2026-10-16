@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.pdf binary
+vendor/** -whitespace
+firmware/target/sn_fft_tables.c -whitespace
+firmware/target/startup_armcc.s -whitespace
+firmware/target/startup_gcc.s -whitespace
